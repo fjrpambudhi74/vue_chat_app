@@ -37,7 +37,6 @@
 
 <script>
 import firebase from "../services/firebase";
-import vue from "vue";
 
 export default {
   app: "Login",
@@ -55,6 +54,8 @@ export default {
         .then(async (res) => {
           console.log(res);
           if (res.user) {
+            // Checking if the user login and uid is match with id in db
+            // While signup store uid as id to db
             await firebase
               .firestore()
               .collection("users")

@@ -12,22 +12,38 @@ export default new Router({
   routes: [{
       path: '/',
       name: 'Login',
-      component: Login
+      component: Login,
+      meta: {
+        auth: true,
+        title: 'Realtime Chat App - Login'
+      }
     },
     {
       path: '/signup',
       name: 'Signup',
-      component: Signup
+      component: Signup,
+      meta: {
+        auth: true,
+        title: 'Realtime Chat App - Signup'
+      }
     },
     {
       path: '/chat',
       name: 'Chat',
-      component: Chat
+      component: Chat,
+      meta: {
+        auth: true,
+        title: 'Realtime Chat App'
+      }
     },
     {
       path: '/profile',
       name: 'Profile',
-      component: Profile
+      component: Profile,
+      meta: {
+        auth: true,
+        title: 'Realtime Chat App - Profile'
+      }
     }
 
   ],

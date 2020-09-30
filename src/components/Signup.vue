@@ -40,7 +40,6 @@
 
 <script>
 import firebase from "../services/firebase";
-import vue from "vue";
 
 export default {
   app: "Signup",
@@ -61,6 +60,7 @@ export default {
         .createUserWithEmailAndPassword(email, password)
         .then(async (res) => {
           console.log("res", res);
+          // When get res data from db then save data to local storage. So db and ls sync
           await firebase
             .firestore()
             .collection("users")

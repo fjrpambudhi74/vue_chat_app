@@ -37,17 +37,11 @@
             width="30px"
             height="30px"
           />
-          <img
-            class="mr-3 pointer"
-            src="../assets/sticker.png"
-            alt="select sticker"
-            width="30px"
-            height="30px"
-          />
+
           <input
             type="text"
             style="
-              width: 85%;
+              width: 90%;
               border: 1px solid transparent;
               border-radius: 4px;
               padding: 5px 10px;
@@ -119,7 +113,6 @@ export default {
         });
     },
     getMessages() {
-      console.log("call coming");
       this.listMessage = [];
       // here we are creating a room
       let groupChatId = `${this.currentPeerUser.id} + ${this.currentUserId}`;

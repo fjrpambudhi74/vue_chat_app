@@ -30,7 +30,7 @@
 
 <script>
 import firebase from "../services/firebase";
-import Vue from "vue";
+
 export default {
   app: "Profile",
   data() {
