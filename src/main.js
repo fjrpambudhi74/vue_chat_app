@@ -14,14 +14,15 @@ import {
   library
 } from '@fortawesome/fontawesome-svg-core'
 import {
-  faPencilAlt
+  faPencilAlt,
+  faUpload
 } from '@fortawesome/free-solid-svg-icons'
 import {
   FontAwesomeIcon
 } from '@fortawesome/vue-fontawesome'
 import './assets/styles.css'
 
-library.add(faPencilAlt)
+library.add(faUpload)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

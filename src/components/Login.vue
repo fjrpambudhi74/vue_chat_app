@@ -1,6 +1,6 @@
 <template>
   <div class="mt-4">
-    <h2>Welcome to Vue.js Chat App</h2>
+    <h2>Welcome to Realtime Chat App</h2>
     <form class="detail-box my-5">
       <div class="form-group my-3">
         <h4>Login to Chat</h4>
@@ -18,19 +18,35 @@
           v-on:keyup.enter="login"
         />
         <router-link :to="{ path: 'signup' }">
-          <h6 class="mb-3" style="font-weight: 600">Create an account</h6>
+          <h6 class="mb-3" style="font-weight: 600; text-decoration: underline">
+            Create an account
+          </h6>
         </router-link>
 
         <button
           type="button"
           v-on:click="login"
           class="btn btn-primary"
-          style="font-weight: 600"
+          style="
+            font-weight: 500;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-radius: 5px;
+          "
         >
           Login
         </button>
       </div>
     </form>
+    <div class="card mx-auto" style="width: 30rem">
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight: 600">Important!</h5>
+        <p class="card-text">
+          For a demo Realtime Chat App you can try it by opening two accounts on
+          the browser
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 

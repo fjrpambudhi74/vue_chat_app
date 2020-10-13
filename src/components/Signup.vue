@@ -1,6 +1,6 @@
 <template>
   <div class="mt-4">
-    <h2>Welcome to Vue.js Chat App</h2>
+    <h2>Welcome to Realtime Chat App</h2>
     <form class="detail-box my-5">
       <div class="form-group my-3">
         <h4>Signup to Chat</h4>
@@ -23,10 +23,17 @@
           placeholder="Enter your password..."
         />
         <router-link :to="{ path: '/' }">
-          <h6 class="mb-3" style="font-weight: 600">Back to login</h6>
+          <h6 class="mb-3" style="font-weight: 600; text-decoration: underline">
+            Back to login
+          </h6>
         </router-link>
         <button
-          style="font-weight: 600"
+          style="
+            font-weight: 500;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-radius: 5px;
+          "
           type="button"
           v-on:click="signup"
           class="btn btn-primary"

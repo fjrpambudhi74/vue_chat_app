@@ -2,10 +2,10 @@
     DEMO STYLE
 */
 
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background: #fafafa;
 }
 
@@ -56,6 +56,8 @@ a:focus {
   width: 100%;
 }
 
+
+
 #sidebar {
   width: 400px;
   position: fixed;
@@ -63,12 +65,23 @@ a:focus {
   left: 0;
   height: 100vh;
   z-index: 999;
-  background: royalblue;
+  background: whitesmoke;
   color: black;
   transition: all 0.3s;
 }
 
+.item_user {
+  margin-left: -20px !important;
+}
 
+.item_user_id {
+  margin-left: 20px !important;
+  margin-top: 7px !important;
+}
+
+h6 {
+  color: #010101;
+}
 
 #sidebar.active {
   margin-left: -250px;
@@ -79,7 +92,7 @@ a:focus {
   padding-bottom: 20px;
   padding-left: 5px;
   padding-right: 5px;
-  background: royalblue;
+  background: #EDEDED;
 }
 
 #sidebar ul.components {
@@ -155,16 +168,26 @@ a.article:hover {
 
 #content {
   width: calc(100% - 350px);
-  padding: 40px;
+  padding: 20px;
   min-height: 100vh;
   transition: all 0.3s;
   position: absolute;
   top: 0;
   right: 0;
+
 }
 
 #content.active {
   width: 100%;
+}
+
+.card {
+  border-radius: 20px;
+  background: #effffb;
+}
+
+.card-text {
+  font-family: 'Open Sans', sans-serif;
 }
 
 #sidebarCollapse span {
@@ -173,6 +196,22 @@ a.article:hover {
 
 .container-fluid button {
   display: none;
+}
+
+/* ---------------------------------------------------
+    CHATBOX
+----------------------------------------------------- */
+
+.chat_box {
+  background-image: url('./bg.png');
+}
+
+/* ---------------------------------------------------
+    LOGIN
+----------------------------------------------------- */
+
+.detail-box {
+  box-shadow: 0 5px 5px lightgrey;
 }
 
 /* ---------------------------------------------------

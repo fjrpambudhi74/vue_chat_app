@@ -9,6 +9,8 @@ import Profile from '../components/Profile.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode: "history",
+  base: process.env.BASE_URL,
   routes: [{
       path: '/',
       name: 'Login',
@@ -45,6 +47,6 @@ export default new Router({
         title: 'Realtime Chat App - Profile'
       }
     }
-
   ],
+
 })

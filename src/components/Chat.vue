@@ -15,19 +15,15 @@
             height="50px"
             style="border-radius: 50%; background: white"
           />
-          <h6
-            style="
-              line-height: 2;
-              font-weight: 600;
-              position: absolute;
-              top: 5%;
-              left: 25%;
-            "
-          >
+          <h6 class="item_user_id" style="line-height: 2; font-weight: 600">
             {{ currentUserName }}
           </h6>
         </div>
-        <button type="button" class="btn btn-primary" v-on:click="logout">
+        <button
+          type="button"
+          class="btn btn-outline-secondary"
+          v-on:click="logout"
+        >
           Logout
         </button>
       </div>
@@ -61,7 +57,9 @@
                 justify-content: space-between;
               "
             >
-              <h6 style="line-height: 2; font-weight: 600">{{ item.name }}</h6>
+              <h6 class="item_user" style="line-height: 2; font-weight: 500">
+                {{ item.name }}
+              </h6>
             </div>
           </div>
           <div style="height: 1px; border-bottom: 1px solid #00388b"></div>
@@ -76,7 +74,21 @@
       </div>
       <div>
         <h2>Welcome {{ currentUserName }},</h2>
-        <h3>{{ currentDescription }}</h3>
+        <h3>"{{ currentDescription }}"</h3>
+      </div>
+      <div>
+        <div
+          class="card"
+          style="width: 30rem; position: fixed; bottom: 10%; left: 45%"
+        >
+          <div class="card-body">
+            <h5 class="card-title" style="font-weight: 600">Important!</h5>
+            <p class="card-text">
+              For a demo Realtime Chat App you can try it by opening two
+              accounts on the browser
+            </p>
+          </div>
+        </div>
       </div>
     </div>
     <div v-else class="header-width">

@@ -1,25 +1,24 @@
 <template>
   <div style="display: flex; flex-direction: column; height: 100vh">
     <header>
-      <div style="height: 60px; background: lightgrey">
+      <div style="height: 90px; background: #ededed">
         <img
           :src="currentPeerUser.URL"
           width="40px"
           class="br-50 header-image"
         />
         <div class="header-image">
-          <h6 class="mt-2" style="font-weight: 600">
+          <h6 class="mt-4 ml-2" style="font-weight: 600">
             {{ currentPeerUser.name }}
           </h6>
         </div>
       </div>
     </header>
-    <div style="background: #efe9e2; flex: 1; overflow-y: auto">
-      <h2 class="welcome">Welcome to Chatbox</h2>
+    <div style="flex: 1; overflow-y: auto" class="chat_box">
       <div class="text-outer">
         <div
           :class="item.idFrom === currentUserId ? 'textFrom' : 'textTo'"
-          class="text-inner"
+          class="text-inner mt-3"
           v-for="item in listMessage"
           :key="item.id"
         >
@@ -28,7 +27,7 @@
       </div>
     </div>
     <footer>
-      <div style="min-height: 60px; background: lightgrey">
+      <div style="min-height: 60px; background: #ededed">
         <div style="display: flex; padding: 15px">
           <img
             class="mr-3 pointer"
@@ -43,7 +42,7 @@
             style="
               width: 90%;
               border: 1px solid transparent;
-              border-radius: 4px;
+              border-radius: 20px;
               padding: 5px 10px;
             "
             class="mr-3"
@@ -51,11 +50,11 @@
             v-on:keyup.enter="sendMessage(inputValue)"
           />
           <img
-            class="mr-2 pointer"
+            class="mr-2 mt-2 pointer"
             src="../assets/send.png"
             alt="select sticker"
-            width="30px"
-            height="30px"
+            width="25px"
+            height="25px"
             v-on:click="sendMessage(inputValue)"
           />
         </div>
@@ -67,6 +66,7 @@
 <script>
 import firebase from "../services/firebase";
 import moment from "moment";
+
 export default {
   app: "ChatBox",
   props: ["currentPeerUser"],
@@ -155,12 +155,14 @@ export default {
 
 <style scoped>
 .welcome {
-  color: #635a5a;
+  color: #010101;
   font-weight: 600;
   margin: 10px 0px 32px;
 }
 .br-50 {
   border-radius: 50%;
+  margin-left: 80px !important;
+  margin-top: 20px !important;
 }
 .header-image {
   float: left;
@@ -177,12 +179,12 @@ export default {
   width: 20%;
 }
 .textFrom {
-  background: teal;
+  background: #dcf8c6;
   color: white;
   margin: 0% 0% 20px 70%;
 }
 .textTo {
-  background: lightcoral;
+  background: #effffb;
   color: black;
   margin: 0% 0% 20px 5%;
 }

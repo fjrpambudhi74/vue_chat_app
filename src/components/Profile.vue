@@ -4,7 +4,7 @@
     <div class="profile">
       <img class="br-06" :src="photoURL" width="100%" height="100%" />
       <label class="avatar">
-        <font-awesome-icon icon="pencil-alt" />
+        <font-awesome-icon icon="upload" />
         <input type="file" name="upload" class="w-0" @change="changeAvatar" />
       </label>
     </div>
@@ -158,11 +158,12 @@ label {
 .avatar {
   width: 35px;
   height: 35px;
-  background: #f46e13;
+  background: #eee;
   border-radius: 0.6rem;
   position: absolute;
   top: 115px;
   right: 0px;
   padding: 2px 0px 0px 7px;
+  cursor: pointer;
 }
 </style>
